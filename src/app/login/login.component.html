@@ -1,0 +1,21 @@
+<div class="container">
+
+    <h2>Login Form</h2>
+    <br>
+    <table>
+        <tr>
+            <td>Username: </td>
+            <td><input type="text" [(ngModel)]="user"></td>
+        </tr>
+        <br>
+        <tr>
+            <td>Password: </td>
+            <td><input type="password" [(ngModel)]="pass"></td>
+        </tr>
+        <br>
+        <tr>
+            <td></td>
+            <td><button (click)="login()" class="btn btn-success">Submit</button></td>
+        </tr>
+    </table>
+</div>

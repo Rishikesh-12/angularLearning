@@ -1,0 +1,34 @@
+.box {
+    width: 190px;
+    border: 1px solid blue;
+    height: 80px;
+    margin-left: 10px;
+    float: left;
+}
+
+.name {
+    padding-top: 5px;
+    margin-top: 10px;
+    font-size: 25px;
+    margin-left: 5px;
+    display: inline;
+    font-weight: lighter;
+}
+
+.salary {
+    margin-top: 5px;
+    font-size: 15px;
+    margin-left: 5px;
+    display: block;
+    height: 15px;
+    margin-bottom: 10px;
+}
+
+a {
+    margin-left: 5px;
+    margin-top: 10px;
+    padding-top: 5px;
+}
+span{
+    margin-right: 12px;
+}

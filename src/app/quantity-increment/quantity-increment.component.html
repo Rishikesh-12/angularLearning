@@ -1,0 +1,26 @@
+
+Simple Button click event!!
+<br><br>
+<button (click)="myClickFunction()">click Me</button>
+<br><br>
+<div>{{clickMessage}}</div>
+
+
+<hr>
+
+<form #clickForm="ngForm" (submit)="incrementFunction()">
+    <div class="form-group">
+        <input class="form-control" type="number" name="qty" #qty="ngModel" [(ngModel)]="clickNumber">   <button type="submit">Add</button>
+    </div>
+</form>
+
+
+<hr>
+
+<form #clickForm="ngForm">
+    <div class="form-group">
+        <button class="subtract" (click)="decrementFunction()">-</button> 
+        <input class="form-control" type="number" name="qty" #qty="ngModel" [(ngModel)]="clickNumber" >   
+        <button type="submit" (click)="incrementFunction()">+</button>
+    </div>
+</form>

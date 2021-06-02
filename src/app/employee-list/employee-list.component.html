@@ -1,0 +1,9 @@
+<div class="container">
+<h2>Employee List</h2>
+<span>Search </span><input type="text" placeholder="Find by name" (keyup)="search()" [(ngModel)]="searchKey">
+<br>
+<br>
+<div class="pack" *ngFor="let item of filteredEmployees">
+    <app-employee-info [employee]="item"></app-employee-info>
+</div>
+</div>

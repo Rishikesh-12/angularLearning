@@ -1,0 +1,45 @@
+<table>
+    <tr>
+        <td class="container">
+            <h1>Edit Employee</h1>
+            <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+                <Strong>Name</Strong><br>
+                <input type="text" name="name" [(ngModel)]="emp.name" #name="ngModel" required minlength="2" maxlength="10">
+                <br>
+                <span *ngIf="name.errors?.required && name.touched" class="error">Name cannot be empty</span>
+                <span *ngIf="!name.errors?.required && name.invalid && name.touched" class="error">Name must be atleast 2 characters long and cannot be greater than 10 characters</span>
+                <br><br>
+                <Strong>Salary</Strong>
+                <br>
+                <input type="text" name="salary" [(ngModel)]="emp.salary" #salary="ngModel" required>
+                <br>
+                <span *ngIf="name.errors?.required && name.touched" class="error">Salary cannot be empty</span>
+                <br><br>
+                <strong>Is Permanent or not</strong>
+                <br>
+                <input type="radio" [value]="true" [(ngModel)]="emp.permanent" name="permanent" #permanentTrue>Yes
+                <input type="radio" [value]="false" [(ngModel)]="emp.permanent" name="permanent" #permanentTrue>No
+                <br><br>
+                <strong>Department</strong>
+                <select [(ngModel)]="emp.department.id" name="department" (change)="emp.department.id">
+                    <option *ngFor="let item of departments" [value]="item.id" [selected]="emp.department.id==item.id" >{{item.name}}</option>
+                </select>
+                <br><br>
+                <button type="submit">Save</button>
+            </form>
+        </td>
+        <td class="container">
+
+            <div>
+                <strong>Employee Model</strong><br>
+                <pre>{{emp | json }}</pre>
+            </div>
+        </td>
+        <td class="container">
+            <div>
+                <strong>Angular Generated Form Model</strong><br>
+                <pre>{{form.value | json}}</pre>
+            </div>
+        </td>
+    </tr>
+</table>

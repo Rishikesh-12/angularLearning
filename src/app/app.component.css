@@ -1,0 +1,20 @@
+body {
+    font-family: Segoe UI, Arial;
+}
+
+a:visited {
+    color: blue
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.active {
+    border-bottom: Solid 1px blue
+}

@@ -1,0 +1,5 @@
+<div class="box">
+    <span class="name">{{employee.name}}</span>
+    <span class="salary">{{employee.salary | currency:'INR'}}</span>
+    <span class="link"><a [routerLink]="['/reactive',employee.id]">Edit</a></span>
+</div>
